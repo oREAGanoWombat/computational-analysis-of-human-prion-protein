@@ -9,4 +9,3 @@ output:
   html_document:
     theme: paper
     hightlight: pygments
-    css: style.css
