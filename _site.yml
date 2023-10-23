@@ -1,5 +1,5 @@
 name: "prion-research"
-output-dir: "docs"
+output_dir: "docs"
 navbar: 
   title: "Computational Exploration of Human Prion Protein"
   left: 
