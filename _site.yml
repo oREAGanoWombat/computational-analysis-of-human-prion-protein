@@ -1,0 +1,12 @@
+name: "prion-research"
+output-dir: "docs"
+navbar: 
+  title: "Computational Exploration of Human Prion Protein"
+  left: 
+    - text: "Home"
+      href: index.html
+output: 
+  html_document:
+    theme: paper
+    hightlight: pygments
+    css: style.css
