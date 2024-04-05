@@ -1,0 +1,55 @@
+# PyMOL script for generating figure of 1QM2 with potential regulatory sites identified through Markov Transient Analysis
+
+# settings
+ Setting: bg_rgb set to grey50.
+ Setting: cartoon_transparency set to 0.40000.
+
+# obtain and prepare structure
+fetch 1qm2
+color white, 1qm2
+
+# select and modify potential regulatory residues with V189 set as source site
+# V189 is shown as sticks, potential regulatory residues are shown as spheres, both colored as magenta
+select resi 189
+util.cbam sele
+show_as sticks, sele
+
+select resi 180
+util.cbam sele
+show_as spheres, sele
+
+select resi 127
+util.cbam sele
+show_as spheres, sele
+
+select resi 172
+util.cbam sele
+show_as spheres, sele
+
+# select and modify potential regulatory residues with V203 as source site
+# V203 is shown as sticks, potential regulatory residues are shown as spheres, both colored as cyan
+select resi 203
+util.cbac sele
+show_as sticks, sele
+
+select resi 197
+util.cbac sele
+show_as spheres, sele
+
+select resi 195
+util.cbac sele
+show_as spheres, sele
+
+select resi 167
+util.cbac sele
+show_as spheres, sele
+
+# hide all non-polar hydrogens
+cmd.hide("(1qm2 and hydro and (elem C extend 1))")
+set_view (\
+    -0.443586409,    0.893180192,    0.073852360,\
+     0.896225035,    0.441937506,    0.038260899,\
+     0.001536325,    0.083161667,   -0.996535420,\
+    -0.000015981,    0.000016734, -170.985610962,\
+    -2.699376106,    4.654743671,    0.159474015,\
+   141.279373169,  200.694778442,  -20.000000000 )

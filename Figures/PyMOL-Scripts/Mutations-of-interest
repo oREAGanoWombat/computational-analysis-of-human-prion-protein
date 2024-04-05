@@ -1,0 +1,47 @@
+# PyMOL script for generating structure of 1QM2 with and without mutations of interest
+
+# open and prepare pdb file
+fetch 1qm2
+util.cbaw 1qm2
+set_view (\
+    -0.443586409,    0.893180192,    0.073852360,\
+     0.896225035,    0.441937506,    0.038260899,\
+     0.001536325,    0.083161667,   -0.996535420,\
+    -0.000015981,    0.000016734, -170.985610962,\
+    -2.699376106,    4.654743671,    0.159474015,\
+   141.279373169,  200.694778442,  -20.000000000 )
+
+# copy structure to new layer for mutations
+copy mutated, 1qm2
+color white, mutated
+
+# make selections for each mutation site
+select V189, 1qm2 and resi 189
+select V203, 1qm2 and resi 203
+select M129, 1qm2 and resi 129
+
+select mutV189I, mutated and resi 189
+select mutV203I, mutated and resi 203
+select mutM129V, mutated and resi 129
+
+# show selections as sticks and color
+show_as sticks, M129
+util.cbac M129
+
+show_as sticks, V189
+util.cbam V189
+
+show_as sticks, V203
+util.cbay V203
+
+# use mutagenesis wizard to mutate residues on "mutated" structure, show mutations as sticks
+show_as sticks, mutV189I
+show_as sticks, mutV203I
+show_as sticks, mutM129V
+
+# hide hydrogens and rest of mutated structure
+hide (hydro)
+hide (mutated and not (mutV189I or mutV203I or mutM129V))
+show_as sticks, mutV189I
+show_as sticks, mutV203I
+show_as sticks, mutM129V

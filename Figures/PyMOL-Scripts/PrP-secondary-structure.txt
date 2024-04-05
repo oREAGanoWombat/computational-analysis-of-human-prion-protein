@@ -1,0 +1,26 @@
+# PyMOL script for generating structure of 1QM2 color coded by secondary structure
+
+# open and prepare pdb file
+fetch 1qm2
+util.cbaw 1qm2
+set_view (\
+    -0.443586409,    0.893180192,    0.073852360,\
+     0.896225035,    0.441937506,    0.038260899,\
+     0.001536325,    0.083161667,   -0.996535420,\
+    -0.000015981,    0.000016734, -170.985610962,\
+    -2.699376106,    4.654743671,    0.159474015,\
+   141.279373169,  200.694778442,  -20.000000000 )
+
+# select and name secondary structures
+select beta1, resi 128-131
+select alpha1, resi 144-154
+select beta2, resi 161-164
+select alpha2, resi 173-194
+select alpha3, resi 200-228
+
+# color secondary structures
+color yellow, beta1
+color red, alpha1
+color cyan, beta2
+color magenta, alpha2
+color green, alpha3

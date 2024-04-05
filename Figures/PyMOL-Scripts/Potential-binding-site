@@ -1,0 +1,38 @@
+# PyMOL script for generating figure of 1QM2 with potential binding sites
+
+# open and prepare PDB file
+fetch 1qm2
+util.cbaw 1qm2
+set_view (\
+    -0.443586409,    0.893180192,    0.073852360,\
+     0.896225035,    0.441937506,    0.038260899,\
+     0.001536325,    0.083161667,   -0.996535420,\
+    -0.000015981,    0.000016734, -170.985610962,\
+    -2.699376106,    4.654743671,    0.159474015,\
+   141.279373169,  200.694778442,  -20.000000000 )
+
+# select mutation residues of interest and show as sticks
+select V189, resi 189
+show_as sticks, V189
+
+select V203, resi 203
+show_as sticks, V203
+
+select M129, resi 129
+show_as sticks, M129
+
+# select potential regulatory sites and color magenta
+select D167, resi 167
+show_as sticks, D167
+util.cbam D167
+
+select G195, resi 195
+show_as sticks, G195
+util.cbam G195
+
+select N197, resi 197
+show_as sticks, N197
+util.cbam N197
+
+# hide hydrogens
+hide (hydro)

@@ -1,0 +1,23 @@
+---
+title: "1QM2 Exhaustive Eris Analysis"
+output:
+  html_document:
+    df_print: paged
+---
+```{r Required Libraries, include=FALSE}
+library(ggplot2)
+library(moments)
+library(Hmisc)
+library(readr)
+library(psych)
+ExData <- read_csv("/Volumes/RWOMACK/@@ResearchFiles/RawData/1QM2exhaustiveSIMPLIFIED.csv")
+```
+
+```{r Data Summary}
+summary(ExData)
+describe(ExData$ddG)
+```
+
+```{r correlation analysis}
+rcorr(as.matrix(ExData))
+```

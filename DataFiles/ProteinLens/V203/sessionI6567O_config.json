@@ -1,0 +1,26 @@
+{
+    "session": "I6567O",
+    "date": "2023-08-29",
+    "pdb": {
+        "provided": false,
+        "source": "1QM2"
+    },
+    "modifications": {
+        "model": 1,
+        "assembly": null,
+        "chains": [
+            "A"
+        ],
+        "strip": []
+    },
+    "source_residues": [
+        [
+            "203",
+            "A"
+        ]
+    ],
+    "methods": {
+        "bond_to_bond_propensity": true,
+        "markov_transient": true
+    }
+}

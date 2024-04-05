@@ -1,0 +1,8 @@
+Binding Sites & Mutation
+AZ6GI4OY - V189I mut
+BR2XZDBD - V189I mut + PPS Pose 1
+Y2ECE5SW - V189I mut + PPS Pose 2
+Pose 3 omitted due to high variation from HuPrP
+ESEIIPGC - V203I mut
+6EC1UY51 - V203I mut + PPS Pose 1
+CGVOWEP7 - V203I mut + PPS Pose 2

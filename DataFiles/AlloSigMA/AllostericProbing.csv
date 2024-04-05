@@ -1,0 +1,10 @@
+﻿Effect of Mutation,,,,,,,
+,Residue of Interest,,dg due to mutation,,,,
+,,,V189I,V203I,V189I + M129V,V203I + M129V,* V189I and V203I are classified as UP-Mutations
+,,,,,,,* M129V is classified as a DOWN-Mutation
+V189 Potential Regulatory Site,V180,180,0.098256944,-0.333628878,,,
+,G127,127,-0.541665182,-0.103426244,,,
+,Q172,172,1.336825176,1.033467379,,,
+V203 Potential Regulatory Site,N197,197,-1.928980542,-2.161153508,,,
+,G195,195,-2.05332619,-2.140235646,,,
+,D167,167,1.783084326,1.600374965,,,
